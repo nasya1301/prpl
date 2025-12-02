@@ -1,0 +1,41 @@
+services:
+  backend-db:
+    image: postgres:17.2-alpine
+    env_file:
+      - .env
+    volumes:
+      - ./db/migrations:/docker-entrypoint-initdb.d
+      - prpl-data:/var/lib/postgresql/data
+    networks:
+      - prpl-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U prpl_koma -d keuangan_desa"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend-api:
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile.dev
+    env_file:
+      - .env
+    depends_on:
+      backend-db:
+        condition: service_healthy
+    volumes:
+      - .:/app
+      - /app/node_modules
+    networks:
+      - prpl-network
+    ports:
+      - "${PORT}:${PORT}"
+    environment:
+      NODE_ENV: development
+    command: sh -c "pnpm seed && pnpm dev"
+
+networks:
+  prpl-network:
+
+volumes:
+  prpl-data:

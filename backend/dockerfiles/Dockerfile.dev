@@ -1,0 +1,16 @@
+FROM node:24-alpine3.21
+
+RUN corepack enable
+
+WORKDIR /app
+
+# Install deps first for caching
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install
+
+# Copy source code
+COPY . .
+
+USER node
+
+CMD ["pnpm", "dev"]

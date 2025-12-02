@@ -1,0 +1,54 @@
+-- BEGIN;
+--
+-- INSERT INTO users (username, password_hash, full_name, role)
+-- VALUES
+-- (
+--   'kades',
+--   '$2b$10$CrMxkDXM1Mps5iTrFZED/ecl9zCtst5mM0S1LVhiRBkGc5vH9KQGy',
+--   'Kepala Desa',
+--   'kades'
+-- ),
+-- (
+--   'sekdes',
+--   '$2b$10$K2r7urj6TxmxK.8VKh2vF.N20bf.g4knVJtuTX0rQdrjzX1OnERD.',
+--   'Sekretaris Desa',
+--   'sekretaris_desa'
+-- ),
+-- (
+--   'kaur_keuangan',
+--   '$2b$10$DLaTURD.tVo2r6XNUZkRMuI7nHB6muAk3pA00Xv.fMPbsfsnlAI6O',
+--   'Kaur Keuangan',
+--   'kaur_keuangan'
+-- ),
+-- (
+--   'kaur_perencanaan',
+--   '$2b$10$s6zOh1AVW4ODwEc5HVGvSuYxI5eQj1aUpTd8aT5sYUpO6chUDtcmC',
+--   'Kaur Perencanaan',
+--   'kaur_perencanaan'
+-- ),
+-- (
+--   'kaur_tu_umum',
+--   '$2b$10$HbsbPTxxA.Hm0rD1eh/sKebLWR5GpG2Fj0rQ/gmQ93zXIM9ZgwlMS',
+--   'Kaur TU & Umum',
+--   'kaur_tu_umum'
+-- ),
+-- (
+--   'kasi_pemerintahan',
+--   '$2b$10$QpVm1wGGK11ZjFFAJIG/Je9FVHWxwWm7t8H5JeXyI2aOlAFVE1Cy6',
+--   'Kasi Pemerintahan',
+--   'kasi_pemerintahan'
+-- ),
+-- (
+--   'kasi_kesejahteraan',
+--   '$2b$10$V4WRBq68gCC.W3D9DyIt9OtdzRSIb5xZzfeV0WWt5E9XK5B7N6pxW',
+--   'Kasi Kesejahteraan',
+--   'kasi_kesejahteraan'
+-- ),
+-- (
+--   'kasi_pelayanan',
+--   '$2b$10$qmF3H9hHbhC1jS0HuU1Uhe86qM5IhFMVQ7/fAOCbG0qDJy7PaexZe',
+--   'Kasi Pelayanan',
+--   'kasi_pelayanan'
+-- );
+--
+-- COMMIT;
